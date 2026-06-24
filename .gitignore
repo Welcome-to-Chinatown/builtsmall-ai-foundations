@@ -1,0 +1,27 @@
+# Original unredacted source images — never push
+Ideas of Order 1.jpg
+Ideas of Order 2 .jpg
+Ideas of Order 3.jpg
+Soft Swerve Dashboard 1.png
+Soft Swerve Dashboard 2.png
+Soft Swerve Dashboard 3.png
+Henry Headshot.jpg
+Michael and Jason at Bayard Street Soft Swerve 2025.jpeg
+
+# Original full-res brand assets (we ship the lite versions)
+BUILTSMALL_LOCKUP.png
+WTC_LOGOMAIN.png
+
+# Source spec — content reference, not for the published site
+builtsmall_ai_foundations_webinar_content.md
+
+# Duplicate of index.html — keep only one
+builtsmall_ai_foundations.html
+
+# Local tools, OS junk, IDE
+.tools/
+.claude/
+.DS_Store
+*.log
+.vscode/
+.idea/
