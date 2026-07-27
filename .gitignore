@@ -25,3 +25,7 @@ builtsmall_ai_foundations.html
 *.log
 .vscode/
 .idea/
+
+# Jason screenshot working copies
+jason_*_OLD.png
+jason_*_new.png
