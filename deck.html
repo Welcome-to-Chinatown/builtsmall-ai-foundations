@@ -323,6 +323,16 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 .word-grid.six .word-card{padding:2vh 1.7vw;gap:.9vh;}
 .word-grid.six .word-term{font-size:1.9vw;}
 .word-grid.six .word-a{font-size:1.42vw;line-height:1.45;}
+
+/* practice countdown timer */
+.timer-wrap{margin-top:3vh;}
+.timer{font-family:var(--mono);font-weight:500;font-size:6vw;line-height:1;letter-spacing:.02em;color:var(--yellow);}
+.timer.warn{color:#ff6b6b;}
+.timer-btns{display:flex;gap:1vw;margin-top:1.8vh;}
+.timer-btn{font-family:var(--mono);font-size:1.05vw;text-transform:uppercase;letter-spacing:.08em;font-weight:700;background:var(--yellow);color:var(--navy);border:2px solid var(--navy);border-radius:8px;padding:1vh 1.9vw;cursor:pointer;}
+.timer-btn:hover{background:var(--yellow-soft);}
+.timer-btn.ghost{background:transparent;color:var(--off);border-color:rgba(237,237,237,.3);}
+.timer-btn.ghost:hover{background:rgba(237,237,237,.08);}
 </style>
 </head>
 <body>
@@ -850,6 +860,13 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
     <h3>Write a prompt for a real problem.</h3>
     <p>Pick something that drains your week. Write a prompt for it using the four parts: role and goal, steps, output, eval.</p>
     <p style="opacity:.85;">No idea where to start? Use one of the ready-made prompts in our prompt guide.</p>
+    <div class="timer-wrap">
+      <div class="timer" id="ptimer">10:00</div>
+      <div class="timer-btns">
+        <button class="timer-btn" onclick="ptStart()">Start</button>
+        <button class="timer-btn ghost" onclick="ptReset()">Reset</button>
+      </div>
+    </div>
   </div>
   <div class="qr-block">
     <div class="qr-eyebrow">Scan for prompts</div>
@@ -966,6 +983,23 @@ document.addEventListener('keydown',e=>{
   if(e.key==='End'){e.preventDefault();show(total-1);}
 });
 document.getElementById('ctr').textContent='1 / '+total;
+</script>
+
+<script>
+(function(){
+  var rem=600, iv=null;
+  function el(){return document.getElementById('ptimer');}
+  function fmt(s){var m=Math.floor(s/60),x=s%60;return m+':'+(x<10?'0':'')+x;}
+  window.ptStart=function(){
+    if(iv) return;
+    iv=setInterval(function(){
+      rem--; var e=el(); if(!e){clearInterval(iv);iv=null;return;}
+      if(rem<=0){clearInterval(iv);iv=null;e.textContent='Time!';e.classList.add('warn');return;}
+      e.textContent=fmt(rem); if(rem<=60) e.classList.add('warn');
+    },1000);
+  };
+  window.ptReset=function(){clearInterval(iv);iv=null;rem=600;var e=el();if(e){e.textContent='10:00';e.classList.remove('warn');}};
+})();
 </script>
 </body>
 </html>
