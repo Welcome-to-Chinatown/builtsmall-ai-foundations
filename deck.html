@@ -310,6 +310,19 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 .def-sub strong{color:var(--yellow);}
 .matrix-focus{margin-top:1.5vh;padding:1.3vh 1.8vw;background:rgba(229,225,56,.14);border:2px solid var(--yellow);border-radius:8px;font-size:1.4vw;color:var(--off);text-align:center;font-family:var(--serif);font-weight:700;}
 .matrix-focus strong{color:var(--yellow);}
+
+/* --- vocabulary grid (from EAC deck) --- */
+.word-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2vw;flex:1;align-items:stretch;}
+.word-card{background:rgba(237,237,237,.04);border:2px solid rgba(229,225,56,.3);border-radius:12px;padding:2.6vh 1.9vw;display:flex;flex-direction:column;gap:1.1vh;}
+.word-term{font-family:var(--serif);font-weight:900;font-size:2vw;color:var(--yellow);line-height:1.05;}
+.word-term span{display:block;font-family:var(--mono);font-size:.85vw;color:rgba(237,237,237,.6);text-transform:uppercase;letter-spacing:.08em;margin-top:.4vh;font-weight:400;}
+.word-q{font-size:1.4vw;color:var(--off);font-style:italic;line-height:1.4;}
+.word-a{font-size:1.28vw;color:rgba(237,237,237,.82);line-height:1.45;}
+.word-foot{margin-top:1.8vh;font-family:var(--serif);font-weight:700;font-size:1.5vw;color:var(--off);text-align:center;}
+.word-grid.six{grid-template-columns:1fr 1fr 1fr;grid-auto-rows:1fr;gap:1.6vw;}
+.word-grid.six .word-card{padding:2vh 1.7vw;gap:.9vh;}
+.word-grid.six .word-term{font-size:1.9vw;}
+.word-grid.six .word-a{font-size:1.42vw;line-height:1.45;}
 </style>
 </head>
 <body>
@@ -335,6 +348,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
   </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Who we are</div><h2>Welcome to Chinatown</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -352,6 +366,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 
 <div class="slide">
 <div class="awning thin"></div>
@@ -374,6 +389,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 
 
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Before we begin</div><h2>Who this is for</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -386,6 +402,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </ul>
 </div>
 </div>
+
 
 <div class="slide">
 <div class="awning thin"></div>
@@ -404,6 +421,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="section-inner">
@@ -413,6 +431,31 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
     <h2>What is AI</h2>
     <p>The foundation. What AI is, how it works, and how it is changing the economy your clients work in.</p>
   </div>
+</div>
+</div>
+
+<div class="slide">
+<div class="awning thin"></div>
+<div class="hdr"><div><div class="eyebrow">Hook &middot; press play</div><h2>Have you used AI today?</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
+<div class="body">
+<div style="flex:1;display:flex;align-items:center;justify-content:center;padding:1vh 0;">
+  <div style="width:min(86vw,128vh);aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:3px solid var(--yellow);box-shadow:0 12px 40px rgba(0,0,0,.45);">
+    <iframe src="https://www.youtube-nocookie.com/embed/sg_fuEzFw0g?rel=0" title="Hook video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen style="width:100%;height:100%;display:block;border:0;"></iframe>
+  </div>
+</div>
+</div>
+</div>
+<div class="slide">
+<div class="awning thin"></div>
+<div class="hdr"><div><div class="eyebrow">The core concept</div><h2>What is an LLM</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
+<div class="body">
+<div class="def-single">
+  <div class="def-box">
+    <div class="def-term">Large Language Model</div>
+    <div class="def-text">A program trained on a <strong>massive amount of human language</strong>, trillions of words, most of the public internet and more. That training is why it reads and writes the way people do, and predicts the next word so well.</div>
+  </div>
+  <div class="def-sub">The name is the definition: <strong>Large</strong> is the huge training data, <strong>Language</strong> is human writing, <strong>Model</strong> predicts the next word. Every chat assistant you know, ChatGPT, Claude, and Gemini, is one.</div>
+</div>
 </div>
 </div>
 <div class="slide">
@@ -441,14 +484,15 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 <div class="slide">
 <div class="awning thin"></div>
-<div class="hdr"><div><div class="eyebrow">The core concept</div><h2>What is an LLM</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
+<div class="hdr"><div><div class="eyebrow">Good to know</div><h2>The vocabulary of AI</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
 <div class="body">
-<div class="def-single">
-  <div class="def-box">
-    <div class="def-term">Large Language Model</div>
-    <div class="def-text">A program trained on a <strong>massive amount of human language</strong>, trillions of words, most of the public internet and more. That training is why it reads and writes the way people do, and predicts the next word so well.</div>
-  </div>
-  <div class="def-sub">The name is the definition: <strong>Large</strong> is the huge training data, <strong>Language</strong> is human writing, <strong>Model</strong> predicts the next word. Every chat assistant you know, ChatGPT, Claude, and Gemini, is one.</div>
+<div class="word-grid six">
+  <div class="word-card"><div class="word-term">RAG</div><div class="word-a">Give the AI your own documents to answer from. Claude Projects and custom GPTs do this, no coding.</div></div>
+  <div class="word-card"><div class="word-term">Agentic AI</div><div class="word-a">AI that takes actions, browses, fills forms, not just answers.</div></div>
+  <div class="word-card"><div class="word-term">Open source</div><div class="word-a">Models like Llama, DeepSeek, Qwen, or Kimi K2 that you can run on your own device. Private, but technical to set up.</div></div>
+  <div class="word-card"><div class="word-term">Context window</div><div class="word-a">The AI's working memory for one conversation. Your prompt, any files, and its reply all share the same space.</div></div>
+  <div class="word-card"><div class="word-term">Tokens</div><div class="word-a">The pieces of text the AI counts, roughly a word each. More tokens, more it costs.</div></div>
+  <div class="word-card"><div class="word-term">Prompt</div><div class="word-a">Your instruction to the AI. Prompt engineering is shaping that instruction to get a good answer.</div></div>
 </div>
 </div>
 </div>
@@ -472,6 +516,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 <div class="matrix-focus">In this training we <strong>focus on the chat assistants</strong>, since they can do all of these.</div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="section-inner">
@@ -483,6 +528,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
   </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">The method</div><h2>Start with the task that drains your week</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -509,6 +555,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Is it a job for AI</div><h2>Three checks</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -537,6 +584,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">The demo</div><h2>Procurement</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -555,6 +603,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">The demo, recording</div><h2>Procurement</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -562,6 +611,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
   <video class="demo-video" src="demo2.mp4" controls preload="metadata" playsinline></video>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">More jobs</div><h2>And there is more</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -577,6 +627,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Lead with the human</div><h2>Safety and privacy</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -607,6 +658,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Protect your data</div><h2>Turn off training</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -617,6 +669,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 
 <div class="slide">
 <div class="awning thin"></div>
@@ -642,6 +695,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Case study, part 1 of 2</div><h2>Jason at Soft Swerve</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -667,6 +721,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Case study, part 2 of 2</div><h2>What the dashboard answers</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -686,6 +741,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 <div class="jason-foot">Same business. Same Square data Jason already had. The AI made it readable.</div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Case study, part 1 of 2</div><h2>Henry at Ideas of Order</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -710,6 +766,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Case study, part 2 of 2</div><h2>What the tool tracks</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -729,6 +786,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 <div class="jason-foot">Same studio. Same projects. The AI turned scattered tracking into one tool Henry built himself.</div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">The pattern</div><h2>Problem first, proven</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -740,6 +798,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">The core principle</div><h2>Using AI effectively</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -764,6 +823,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 <div style="margin-top:2.6vh;text-align:center;font-family:var(--serif);font-weight:900;font-size:1.9vw;color:var(--yellow);line-height:1.2;">The quality of your input sets the quality of your output.</div>
 </div>
 </div>
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">How to ask</div><h2>The prompt framework</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -779,6 +839,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </table>
 </div>
 </div>
+
 
 <div class="slide">
 <div class="awning thin"></div>
@@ -801,6 +862,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 
 
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Keep going</div><h2>Continue working on your prompt</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -813,6 +875,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 </div>
+
 
 
 <div class="slide">
@@ -850,6 +913,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 
 
+
 <div class="slide">
 <div class="awning thin"></div>
 <div class="hdr"><div><div class="eyebrow">Thank you</div><h2>Q &amp; A</h2></div><img class="logo" alt="BuiltSmall" src="lockup_lite.png"></div>
@@ -872,11 +936,12 @@ html,body{width:100%;height:100%;overflow:hidden;background:#060a26;font-family:
 </div>
 </div>
 
+
 </div>
 
 <div class="nav">
   <button onclick="prev()" aria-label="Previous">&larr;</button>
-  <div class="slide-counter" id="ctr">1 / 29</div>
+  <div class="slide-counter" id="ctr">1 / 31</div>
   <button onclick="next()" aria-label="Next">&rarr;</button>
 </div>
 <div class="progress"><div class="progress-fill" id="prog" style="width:4%"></div></div>
